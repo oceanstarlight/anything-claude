@@ -1,0 +1,151 @@
+<div class="app" id="app">
+  <header class="top">
+    <div class="brand">
+      <h1 class="logo"><span class="logo-a">SAND</span><span class="logo-b">TAX</span></h1>
+      <p class="tag">The laws of physics are sentences. Rewrite them.</p>
+    </div>
+    <nav class="modes" role="tablist" aria-label="Mode">
+      <button id="tab-sandbox" class="mode" role="tab" aria-selected="true">Sandbox</button>
+      <button id="tab-puzzles" class="mode" role="tab" aria-selected="false">Puzzles <span id="puzzle-progress" class="count">0/10</span></button>
+    </nav>
+    <div class="top-actions">
+      <button id="btn-help" class="icon-btn" title="How it works (?)" aria-label="How it works">?</button>
+      <button id="btn-sound" class="icon-btn" title="Sound (M)" aria-label="Toggle sound" aria-pressed="true">♪</button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <section class="world-col" aria-label="World">
+      <div class="screen" id="screen">
+        <canvas id="world" width="768" height="480" aria-label="Falling-sand world"></canvas>
+        <div class="hud" id="hud" hidden></div>
+        <div class="banner" id="banner" hidden></div>
+        <div class="win" id="win" hidden>
+          <div class="win-card">
+            <div class="win-word">WIN</div>
+            <p id="win-text"></p>
+            <div class="win-actions">
+              <button id="btn-replay" class="btn ghost">Replay</button>
+              <button id="btn-next" class="btn primary">Next level</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dpad" id="dpad" hidden>
+        <button data-dir="up" aria-label="Up">▲</button>
+        <button data-dir="left" aria-label="Left">◀</button>
+        <button data-dir="right" aria-label="Right">▶</button>
+        <button data-dir="down" aria-label="Down">▼</button>
+      </div>
+      <div class="coach" id="coach" hidden>
+        <p><b>Every law of this world is written on the right.</b> Tap <span class="mini prop" style="--c:#d0995a">HEAVY</span> in <i>SAND IS HEAVY</i> to delete it, then drag <span class="mini prop" style="--c:#a8dcff">FLOATY</span> into its place.</p>
+        <button id="btn-coach" class="btn small">Got it</button>
+      </div>
+      <div class="dock" id="dock-sandbox">
+        <div class="brushes" id="brushes" role="toolbar" aria-label="Brush"></div>
+        <div class="dock-row">
+          <label class="range" for="brush-size">Brush <input type="range" id="brush-size" min="1" max="12" value="4"><output id="brush-out">4</output></label>
+          <div class="btn-group">
+            <button id="btn-play" class="btn" title="Space">Pause</button>
+            <button id="btn-step" class="btn" title="Step one tick (.)">Step</button>
+            <button id="btn-speed" class="btn" title="Simulation speed">1×</button>
+          </div>
+          <div class="btn-group">
+            <button id="btn-new-world" class="btn">New world</button>
+            <button id="btn-clear" class="btn">Empty</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dock" id="dock-puzzle" hidden>
+        <div class="level-meta">
+          <span class="level-num" id="level-num">01</span>
+          <div class="level-text">
+            <h2 id="level-name">Hello, Sand</h2>
+            <p id="level-hint"></p>
+          </div>
+        </div>
+        <div class="dock-row">
+          <span class="keys"><kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd> or <kbd>WASD</kbd> move whatever IS YOU</span>
+          <div class="btn-group">
+            <button id="btn-restart" class="btn" title="R">Restart</button>
+            <button id="btn-levels" class="btn">Levels</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="laws" aria-label="Laws">
+      <div class="laws-head">
+        <h2>Laws <span id="law-count" class="count"></span></h2>
+        <div class="btn-group">
+          <button id="btn-undo" class="btn small" title="Ctrl+Z">Undo</button>
+          <button id="btn-reset-rules" class="btn small">Defaults</button>
+          <button id="btn-share" class="btn small">Share</button>
+        </div>
+      </div>
+      <div class="board" id="board"></div>
+      <p class="info" id="info" aria-live="polite">Tap a word to add it to the highlighted law. Drag to place it anywhere. Tap a placed word to remove it.</p>
+      <div class="palette" id="palette"></div>
+      <div class="recipes" id="recipes">
+        <h3>Try a law</h3>
+        <div class="chips" id="chips"></div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="foot">
+    <span>Built with Claude. Space pauses, Ctrl+Z undoes, 1 to 0 pick a brush, right-click erases.</span>
+  </footer>
+</div>
+
+<div class="modal" id="modal-help" hidden role="dialog" aria-modal="true" aria-labelledby="help-title">
+  <div class="sheet">
+    <button class="close" data-close aria-label="Close">×</button>
+    <h2 id="help-title">How SANDTAX works</h2>
+    <p>This world has no built-in physics. Sand falls only because a law says <span class="mini noun" style="--c:#e4be76">SAND</span> <span class="mini op">IS</span> <span class="mini prop" style="--c:#d0995a">HEAVY</span>. Delete that law and the sand hangs in the air. Every law is written in word tiles, and you can change any of them while the world runs.</p>
+    <h3>Grammar</h3>
+    <ul class="grammar">
+      <li><b>THING IS PROPERTY</b>: <i>LAVA IS HOT</i></li>
+      <li><b>THING IS THING</b>: <i>WATER IS SAND</i> turns all water into sand</li>
+      <li><b>THING EATS THING</b>: <i>FIRE EATS PLANT</i> turns plant that touches fire into fire</li>
+      <li><b>THING MAKES THING</b>: <i>LAVA MAKES SMOKE</i> keeps producing smoke</li>
+      <li><b>THING HAS THING</b>: <i>ICE HAS WATER</i> leaves water when ice is destroyed</li>
+      <li><b>AND</b> joins words on either side. <b>NOT</b> cancels a property: <i>SAND IS NOT HEAVY</i>.</li>
+    </ul>
+    <h3>Words</h3>
+    <div class="glossary" id="glossary"></div>
+    <h3>Puzzles</h3>
+    <p>Make something that IS YOU touch something that IS WIN. Locked words have a dot and cannot move, but you can slip loose words between them.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-share" hidden role="dialog" aria-modal="true" aria-labelledby="share-title">
+  <div class="sheet narrow">
+    <button class="close" data-close aria-label="Close">×</button>
+    <h2 id="share-title">Share these laws</h2>
+    <p>Anyone who pastes this code gets your exact set of laws.</p>
+    <div class="copy-row">
+      <input id="share-code" type="text" readonly aria-label="Law code">
+      <button id="btn-copy" class="btn primary">Copy</button>
+    </div>
+    <p class="share-link" id="share-link-wrap" hidden>Link: <a id="share-link" href="#" target="_blank" rel="noopener"></a></p>
+    <h3>Load a code</h3>
+    <div class="copy-row">
+      <input id="load-code" type="text" placeholder="r_..." aria-label="Paste a law code">
+      <button id="btn-load" class="btn">Load</button>
+    </div>
+    <p class="share-status" id="share-status" aria-live="polite"></p>
+  </div>
+</div>
+
+<div class="modal" id="modal-levels" hidden role="dialog" aria-modal="true" aria-labelledby="levels-title">
+  <div class="sheet">
+    <button class="close" data-close aria-label="Close">×</button>
+    <h2 id="levels-title">Levels</h2>
+    <div class="level-grid" id="level-grid"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
