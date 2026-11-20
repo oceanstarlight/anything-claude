@@ -186,7 +186,7 @@
       '<div class="hero-label">' + label + '</div>' +
       '<div class="hero-art">' + AIQ.mascot(type) + '</div>' +
       '<h2 class="hero-name">' + esc(type.name) + '</h2>' +
-      '<div class="hero-maker">by ' + esc(type.maker) + '</div>' +
+      '<div class="hero-maker">by ' + esc(type.maker) + ' · ' + esc(type.ver) + ' 기준</div>' +
       '<div class="hero-nick">' + esc(type.nick) + '</div>' +
       '</div>';
     html += '<p class="quote">"' + esc(type.tagline) + '"</p>';
@@ -310,7 +310,7 @@
       return '<button type="button" class="type-card" data-goto="' + t.id + '" style="background:' + t.color + '1F">' +
         (t.local ? '<span class="tl" title="로컬 실행 가능"></span>' : '') +
         '<span class="ta">' + AIQ.mascot(t, { decorative: true }) + '</span>' +
-        '<span class="tn">' + esc(t.name) + '</span><span class="tk">' + esc(t.nick) + '</span></button>';
+        '<span class="tn">' + esc(t.name) + '</span><span class="tv">' + esc(t.ver) + '</span><span class="tk">' + esc(t.nick) + '</span></button>';
     }).join('');
     show('gallery');
   }
