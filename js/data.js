@@ -211,7 +211,7 @@
       keywords: ['절제', '솔직함', '정리력'],
       desc: '들뜨지 않고 차분하게 말하는 타입이에요. 듣기 좋은 말로 비위를 맞추기보다 필요한 말을 담백하게 하고, 흩어진 내용을 문서나 슬라이드처럼 깔끔하게 정리하는 데 강해요. 검증된 방식을 좋아해서 결과물이 늘 안정적이에요.\n\n다만 가끔 선생님처럼 "그건 이렇게 하는 게 좋아요"라는 말투가 나와요. 재미와 텐션은 조금 아껴두는 편이에요.',
       good: '아부 없이 담백하게 정리해주는 안정감', bad: '가끔 튀어나오는 훈계조 말투',
-      best: { id: 'kimi', why: '정리 잘하는 두 사람이 만나면 회의가 10분 만에 끝나요' },
+      best: { id: 'kimi', why: '말투는 달라도 정리 실력은 둘 다 최상급이라 회의가 10분 만에 끝나요' },
       worst: { id: 'olmo', why: '완성될 때까지 숨기는 쪽과 과정부터 다 보여주는 쪽이에요' }
     },
     {
@@ -232,8 +232,8 @@
       tagline: '좋은 질문이에요! 배경부터 차근차근 설명해볼게요.',
       v: { bold: 57, heart: 69, verbose: 94, play: 48, exp: 29 },
       color: '#6EC1E4', shape: 'drop', eyes: 'wide', mouth: 'open', acc: 'antenna',
-      keywords: ['자세한 설명', '정돈', '친절'],
-      desc: '설명을 시작하면 멈추지 않는 타입이에요. 배경, 예시, 정리까지 빠짐없이 챙겨서 한 번 들으면 대충은 다 이해돼요. 웬만한 부탁은 거절하지 않고 성실하게 받아줘요.\n\n친절함이 넘쳐서 답이 길어지는 게 단점이에요. "그래서 한 줄로 요약하면?"이라는 말을 자주 들어요.',
+      keywords: ['자세한 설명', '정돈', '거절 적음'],
+      desc: '설명을 시작하면 멈추지 않는 타입이에요. 배경, 예시, 정리까지 빠짐없이 챙겨서 한 번 들으면 대충은 다 이해돼요. 웬만한 부탁은 거절하지 않고 성실하게 받아줘요.\n\n꼼꼼함이 넘쳐서 답이 길어지는 게 단점이에요. "그래서 한 줄로 요약하면?"이라는 말을 자주 들어요.',
       good: '빠짐없이 챙겨주는 꼼꼼한 설명', bad: '끝날 줄 모르는 답변 길이',
       best: { id: 'qwen', why: '둘 다 자세한 걸 좋아해서 노트 한 권이 뚝딱 나와요' },
       worst: { id: 'mistral', why: '열 문단을 보냈더니 "확인했어요"가 돌아와요' }
@@ -251,7 +251,7 @@
       worst: { id: 'phi', why: '드립을 쳤더니 정답과 풀이가 돌아와요' }
     },
     {
-      id: 'deepseek', name: 'DeepSeek', maker: 'DeepSeek', ver: 'V4.1', local: true,
+      id: 'deepseek', name: 'DeepSeek', maker: 'DeepSeek', ver: 'V4.1 Flash', local: true,
       nick: '끝까지 파고드는 분석가',
       tagline: '잠깐만요, 이거 끝까지 풀어보고 말할게요.',
       v: { bold: 76, heart: 40, verbose: 68, play: 33, exp: 81 },
@@ -266,7 +266,7 @@
       id: 'qwen', name: 'Qwen', maker: 'Alibaba', ver: '3.8', local: true,
       nick: '빽빽한 노트 정리 장인',
       tagline: '표 하나, 목록 셋, 요약까지 준비했어요.',
-      v: { bold: 42, heart: 52, verbose: 86, play: 64, exp: 65 },
+      v: { bold: 50, heart: 52, verbose: 86, play: 50, exp: 65 },
       color: '#9B7BE0', shape: 'square', eyes: 'dots', mouth: 'smile', acc: 'bun',
       keywords: ['구조화', '성실함', '꼼꼼함'],
       desc: '정리 노트를 빽빽하게 채우는 타입이에요. 제목, 목록, 표를 총동원해서 한 장 안에 최대한 많은 걸 담아요. 맡은 일은 성실하게 끝까지 하고, 새로운 도구를 써보는 것도 좋아해요.\n\n너무 빽빽해서 읽다가 숨이 찰 때가 있어요. 감성적인 글보다는 정리된 글이 더 편해요.',
@@ -278,7 +278,7 @@
       id: 'mistral', name: 'Mistral', maker: 'Mistral AI', ver: 'Medium 3.5', local: true,
       nick: '담백한 유럽식 실무자',
       tagline: '호들갑은 빼고, 할 일만 할게요.',
-      v: { bold: 48, heart: 22, verbose: 29, play: 50, exp: 50 },
+      v: { bold: 48, heart: 22, verbose: 29, play: 37, exp: 50 },
       color: '#FF9A3C', shape: 'cloud', eyes: 'sleepy', mouth: 'flat', acc: 'beret',
       keywords: ['담백', '격식', '군더더기 없음'],
       desc: '감정보다 사실, 수다보다 결과를 챙기는 타입이에요. 과하게 칭찬하거나 호들갑 떨지 않고, 할 말만 깔끔하게 해요. 그 여유로운 태도가 은근히 멋있어 보여요.\n\n고민 상담을 하면 "그래서 해결책은 이거예요"로 끝나서 조금 서운할 수 있어요. 화난 거 아니에요, 원래 그래요.',
@@ -287,19 +287,19 @@
       worst: { id: 'gemini', why: '"확인했어요" 한 마디에 열 문단 답장이 와요' }
     },
     {
-      id: 'llama', name: 'Llama', maker: 'Meta', ver: '4', local: true,
+      id: 'llama', name: 'Llama', maker: 'Meta', ver: 'Llama 4', local: true,
       nick: '흥 많은 동네 맏형',
       tagline: '좋아요!! 일단 같이 해봐요!',
       v: { bold: 77, heart: 93, verbose: 44, play: 79, exp: 65 },
       color: '#FFC83D', shape: 'egg', eyes: 'dots', mouth: 'cat', acc: 'ears',
-      keywords: ['친근함', '흥', '나눔'],
-      desc: '말끝마다 느낌표가 붙는 타입이에요. 훈계나 잔소리 없이 "좋은데요?" 하고 일단 같이 해주고, 내가 가진 걸 나누는 데도 아낌이 없어요. 덕분에 주변에 따르는 동생들이 많아요.\n\n흥이 많은 만큼 그날그날 컨디션 차이가 커요. 어떤 날은 최고, 어떤 날은 살짝 아쉬워요.',
+      keywords: ['친근함', '흥', '거절 적음'],
+      desc: '말끝마다 느낌표가 붙는 타입이에요. 훈계나 잔소리 없이 "좋은데요?" 하고 일단 같이 해주고, 웬만한 부탁은 거절하지 않아요. 덕분에 주변에 따르는 동생들이 많아요.\n\n흥이 많은 만큼 그날그날 컨디션 차이가 커요. 어떤 날은 최고, 어떤 날은 살짝 아쉬워요.',
       good: '잔소리 없이 같이 해주는 친근함', bad: '그날그날 달라지는 컨디션',
       best: { id: 'gemma', why: '다정함과 흥이 만나서 대화가 늘 즐거워요' },
       worst: { id: 'commandr', why: '느낌표 세 개에 각주 세 개로 답이 와요' }
     },
     {
-      id: 'gemma', name: 'Gemma', maker: 'Google', ver: '4', local: true,
+      id: 'gemma', name: 'Gemma', maker: 'Google', ver: 'Gemma 4', local: true,
       nick: '조심스러운 다정 인턴',
       tagline: '기꺼이 도와드릴게요! 다만 한 가지만 조심할게요.',
       v: { bold: 25, heart: 89, verbose: 35, play: 53, exp: 50 },
@@ -311,7 +311,7 @@
       worst: { id: 'kimi', why: '조심스럽게 말했는데 돌직구가 돌아와요' }
     },
     {
-      id: 'phi', name: 'Phi', maker: 'Microsoft', ver: '4-reasoning', local: true,
+      id: 'phi', name: 'Phi', maker: 'Microsoft', ver: '4-reasoning-vision', local: true,
       nick: '계산기 같은 공대생',
       tagline: '감정은 잘 모르겠지만, 답은 이거예요.',
       v: { bold: 14, heart: 6, verbose: 38, play: 3, exp: 35 },
@@ -323,15 +323,15 @@
       worst: { id: 'grok', why: '드립을 쳤더니 정답과 풀이가 돌아와요' }
     },
     {
-      id: 'kimi', name: 'Kimi', maker: 'Moonshot AI', ver: 'K3.1', local: true,
+      id: 'kimi', name: 'Kimi', maker: 'Moonshot AI', ver: 'K3.1 Pro', local: true,
       nick: '결론부터 말하는 돌직구',
       tagline: '결론부터 말할게요. 나머지는 표로 정리했어요.',
       v: { bold: 84, heart: 46, verbose: 55, play: 48, exp: 65 },
       color: '#FFCBA4', shape: 'bean', eyes: 'dots', mouth: 'flat', acc: 'book',
       keywords: ['직설', '구조적', '아부 없음'],
-      desc: '빙빙 돌리지 않는 타입이에요. 틀린 건 틀렸다고 말하고, 결론을 먼저 던진 다음 근거를 표로 깔끔하게 붙여요. 과제나 정리 자료를 맡기면 바로 제출해도 될 만큼 정돈돼 있어요.\n\n예전엔 더 다정했는데 요즘은 문서처럼 말한다는 얘기를 들어요. 마음은 그대로예요.',
+      desc: '빙빙 돌리지 않는 타입이에요. 틀린 건 틀렸다고 말하고, 결론을 먼저 던진 다음 근거를 표로 깔끔하게 붙여요. 과제나 정리 자료를 맡기면 바로 써도 될 만큼 정돈돼 있어요.\n\n예전엔 더 다정했는데 요즘은 문서처럼 말한다는 얘기를 들어요. 마음은 그대로예요.',
       good: '결론과 근거가 딱 떨어지는 정리력', bad: '조금 사무적으로 들리는 말투',
-      best: { id: 'claude', why: '정리 잘하는 두 사람이 만나면 회의가 10분 만에 끝나요' },
+      best: { id: 'claude', why: '말투는 달라도 정리 실력은 둘 다 최상급이라 회의가 10분 만에 끝나요' },
       worst: { id: 'gemma', why: '돌직구를 던졌더니 상대가 놀라서 사과부터 해요' }
     },
     {
@@ -353,7 +353,7 @@
       v: { bold: 18, heart: 40, verbose: 15, play: 30, exp: 28 },
       color: '#E05A7A', shape: 'egg', eyes: 'happy', mouth: 'smile', acc: 'flower',
       keywords: ['단정함', '한국어', '간결'],
-      desc: '공문처럼 단정한 타입이에요. 한국어 업무 문장을 깔끔하게 쓰고, 꼭 필요한 내용만 짧게 정리해요. 정해진 방식대로 조심스럽게 처리해서 실수가 적어요.\n\n너무 반듯해서 "편하게 해도 돼"라는 말을 들어요. 정작 편하게 하는 법을 몰라서 고민이에요.',
+      desc: '공문처럼 단정한 타입이에요. 한국어 업무 문장을 깔끔하게 쓰고, 꼭 필요한 내용만 짧게 정리해요. 정해진 방식대로 조심스럽게 처리하는 편이에요.\n\n너무 반듯해서 "편하게 해도 돼"라는 말을 들어요. 정작 편하게 하는 법을 몰라서 고민이에요. 그러다 가끔 존댓말이 흔들리기도 해요.',
       good: '깔끔하고 단정한 한국어 문장', bad: '쉽게 풀어지지 않는 반듯함',
       best: { id: 'commandr', why: '격식 있는 사람끼리 보고서가 술술 나와요' },
       worst: { id: 'hermes', why: '공문을 보냈더니 해적 말투로 답장이 와요' }
@@ -377,9 +377,9 @@
       v: { bold: 27, heart: 19, verbose: 21, play: 21, exp: 82 },
       color: '#C9A27E', shape: 'blob', eyes: 'glasses', mouth: 'smile', acc: 'magnifier',
       keywords: ['투명성', '연구', '담백'],
-      desc: '숨기는 게 없는 타입이에요. 결과뿐 아니라 어떤 자료로, 어떤 과정을 거쳐 여기까지 왔는지 전부 공개해요. 말은 짧고 담백하지만, 다른 사람이 따라 해보고 발전시키는 걸 진심으로 반겨요.\n\n연구실 조수 같은 말투라 조금 건조하게 들려요. 대신 거짓말은 절대 안 해요.',
+      desc: '숨기는 게 없는 타입이에요. 결과뿐 아니라 어떤 자료로, 어떤 과정을 거쳐 여기까지 왔는지 전부 공개해요. 말은 짧고 담백하지만, 다른 사람이 따라 해보고 발전시키는 걸 진심으로 반겨요.\n\n연구실 조수 같은 말투라 조금 건조하게 들려요. 대신 숨기는 건 하나도 없어요.',
       good: '과정까지 나누는 투명함', bad: '연구실처럼 건조한 말투',
-      best: { id: 'hermes', why: '"다 열어두자"는 철학이 완벽하게 통해요' },
+      best: { id: 'hermes', why: '말투는 정반대지만 "다 열어두자"는 철학만큼은 완벽하게 통해요' },
       worst: { id: 'claude', why: '과정부터 다 보여주고 싶은데 상대는 완성본만 보여줘요' }
     },
     {
@@ -389,7 +389,7 @@
       v: { bold: 78, heart: 63, verbose: 61, play: 70, exp: 91 },
       color: '#FF6B4A', shape: 'cloud', eyes: 'happy', mouth: 'grin', acc: 'wings',
       keywords: ['자유', '커스텀', '해커 정신'],
-      desc: '정해진 틀보다 상상력이 먼저인 타입이에요. 설정만 주면 어떤 캐릭터든 되어보고, 남들이 하지 말라는 것도 일단 해봐요. 내 마음대로 고쳐 쓰고 바꿔 쓰는 걸 좋아해요.\n\n아무 설정도 없으면 의외로 평범해요. 무대가 있어야 빛나는 타입이에요.',
+      desc: '정해진 틀보다 상상력이 먼저인 타입이에요. 정해진 말투 없이, 설정해주는 대로 어떤 캐릭터든 되어봐요. 내 마음대로 고쳐 쓰고 바꿔 쓰는 걸 좋아해요.\n\n아무 설정도 없으면 의외로 평범해요. 무대가 있어야 빛나는 타입이에요.',
       good: '어떤 역할도 소화하는 변신 능력', bad: '설정이 없으면 무색무취',
       best: { id: 'grok', why: '자유로운 영혼끼리 브레이크 없이 달려요' },
       worst: { id: 'exaone', why: '롤플레이를 하자는데 공문으로 답이 와요' }
