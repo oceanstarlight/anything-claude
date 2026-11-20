@@ -96,7 +96,7 @@
       while (ctx.measureText(type.name).width > cw - 120 && nameSize > 80) { nameSize -= 6; ctx.font = nameSize + 'px ' + DISPLAY; }
       ctx.fillText(type.name, W / 2, 930);
       ctx.font = '600 34px ' + BODY; ctx.fillStyle = '#6B5D50';
-      ctx.fillText('by ' + type.maker, W / 2, 1020);
+      ctx.fillText('by ' + type.maker + ' · ' + type.ver + ' 기준', W / 2, 1020);
 
       // 별명 스티커
       ctx.font = '56px ' + DISPLAY;

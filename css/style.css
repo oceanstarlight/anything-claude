@@ -482,6 +482,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .type-card .ta { width: 96px; margin: 0 auto; }
 .type-card .ta svg { width: 100%; height: auto; display: block; }
 .type-card .tn { display: block; font-family: var(--display); font-size: 20px; line-height: 1.2; margin-top: 4px; }
+.type-card .tv { display: block; font-size: 12px; font-weight: 700; color: var(--ink-2); opacity: .8; }
 .type-card .tk { display: block; font-size: 13px; color: var(--ink-2); line-height: 1.35; margin-top: 2px; }
 .type-card .tl {
   position: absolute; top: 8px; right: 8px;
