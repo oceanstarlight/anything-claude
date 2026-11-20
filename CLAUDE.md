@@ -7,6 +7,5 @@
 - 모르는 부분이나 결정이 애매한 부분은 추측하지 말고 사용자에게 질문한다.
 
 ## 프로젝트
-- "나랑 닮은 AI는?" 성향 테스트 사이트. 빌드 없는 정적 HTML/CSS/JS.
 - GitHub Pages로 배포한다 (`.github/workflows/pages.yml`, 기본 브랜치에 push되면 자동 배포).
 - 문항이나 AI 유형 점수를 바꾼 뒤에는 `node scripts/simulate.js 50000`으로 결과 분포가 고른지 확인한다.
